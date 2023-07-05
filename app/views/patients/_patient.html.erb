@@ -3,6 +3,9 @@
   <th scope="row"><%= patient.id %></th>
   <td><%= patient.name %></td>
   <td><%= patient.age %></td>
+  <% if patient.treatments.any? %>
+  <td><%= patient.treatments.last.name %></td>
+  <% end %>
   <td><%= link_to patient, class: 'btn' do %>
     <svg xmlns="http://www.w3.org/2000/svg" class="icon
     icon-tabler icon-tabler-eye-check" width="20" height="20" viewBox="0 0
